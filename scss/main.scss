@@ -1,0 +1,26 @@
+// ========================================
+// NUTRIPRO - MAIN SASS FILE
+// ========================================
+
+// 1. Configuration
+@import 'variables';
+@import 'mixins';
+
+// 2. Base
+@import 'reset';
+@import 'base';
+
+// 3. Layout
+@import 'layout';
+
+// 4. Components
+@import 'components';
+
+// 5. Sections
+@import 'header';
+@import 'hero';
+@import 'services';
+@import 'footer';
+
+// 6. Responsive
+@import 'responsive';

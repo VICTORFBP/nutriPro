@@ -1,0 +1,62 @@
+// ========================================
+// RESPONSIVE
+// ========================================
+
+// === EXTRA SMALL DEVICES (320px - 479px) ===
+@include respond-below($breakpoint-xs) {
+  .hero__title {
+    font-size: 1.75rem;
+  }
+  
+  .hero__buttons {
+    flex-direction: column;
+    
+    .button {
+      width: 100%;
+    }
+  }
+  
+  .service-card__amount {
+    font-size: $font-size-3xl;
+  }
+}
+
+// === SMALL DEVICES (480px - 767px) ===
+@include respond-between($breakpoint-xs, $breakpoint-md) {
+  .section__title {
+    font-size: $font-size-2xl;
+  }
+  
+  .hero__stats {
+    gap: $spacing-md;
+  }
+}
+
+// === TABLET (768px - 1023px) ===
+@include tablet {
+  .services__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .service-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+// === LARGE DESKTOP (1280px+) ===
+@include respond-above($breakpoint-xl) {
+  .container {
+    max-width: 1280px;
+  }
+  
+  .hero__title {
+    font-size: 4rem;
+  }
+  
+  .section__title {
+    font-size: $font-size-4xl;
+  }
+}
