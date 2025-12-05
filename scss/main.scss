@@ -1,6 +1,7 @@
 // ========================================
 // NUTRIPRO - MAIN SASS FILE
-// ========================================
+// Corazón del proyecto
+//========================================
 
 // 1. Configuration
 @import 'variables';
@@ -19,7 +20,10 @@
 // 5. Sections
 @import 'header';
 @import 'hero';
+@import 'about';
 @import 'services';
+@import 'testimonials';
+@import 'contact';
 @import 'footer';
 
 // 6. Responsive

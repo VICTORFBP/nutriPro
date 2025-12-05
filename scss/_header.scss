@@ -1,0 +1,20 @@
+.header {
+  width: 100%;
+  padding: $spacing-sm 0;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #eee;
+
+  .nav {
+    @include flex-center;
+    justify-content: space-between;
+
+    &__menu {
+      display: flex;
+      gap: $spacing-md;
+      font-weight: 600;
+    }
+  }
+}
