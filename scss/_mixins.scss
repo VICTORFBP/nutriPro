@@ -1,0 +1,55 @@
+// Funciones reutilizables, como:, Media queries (respond-below, respond-above), Sombras, Botones, Animaciones
+
+// ========================================
+// MIXINS
+// ========================================
+
+// MAX-WIDTH
+@mixin respond-below($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+// MIN-WIDTH
+@mixin respond-above($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+// BETWEEN
+@mixin respond-between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+// TABLET
+@mixin tablet {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// FLEX CENTER
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// BUTTON
+@mixin button-style($bg, $color: white) {
+  background: $bg;
+  color: $color;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+

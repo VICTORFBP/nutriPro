@@ -1,0 +1,17 @@
+.services {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-lg;
+  }
+}
+
+.service-card {
+  @extend .card;
+
+  &__amount {
+    font-size: $font-size-2xl;
+    font-weight: 700;
+    color: $color-primary;
+  }
+}

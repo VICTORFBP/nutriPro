@@ -1,0 +1,16 @@
+.hero {
+  padding: $spacing-xl 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  &__title {
+    font-size: $font-size-4xl;
+    margin-bottom: $spacing-md;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: $spacing-md;
+  }
+}
