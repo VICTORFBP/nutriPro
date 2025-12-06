@@ -1,0 +1,106 @@
+// ========================================
+// COMPONENTS
+// ========================================
+
+// === BUTTONS ===
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  padding: $spacing-sm $spacing-md;
+  font-family: $font-secondary;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  i {
+    font-size: 1.1em;
+  }
+  
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.button--primary {
+  background-color: $color-primary;
+  color: white;
+  
+  &:hover {
+    background-color: darken($color-primary, 8%);
+    box-shadow: 0 4px 12px rgba($color-primary, 0.3);
+  }
+}
+
+.button--outline {
+  background-color: transparent;
+  color: $color-primary;
+  border: 2px solid $color-primary;
+  
+  &:hover {
+    background-color: $color-primary;
+    color: white;
+  }
+}
+
+.button--full {
+  width: 100%;
+}
+
+// === CARDS ===
+.card {
+  background: white;
+  padding: $spacing-lg;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// === SCROLL TO TOP ===
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background-color: $color-primary;
+  color: white;
+  border-radius: 50%;
+  @include flex-center;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  &:hover {
+    background-color: darken($color-primary, 8%);
+    transform: translateY(-5px);
+  }
+  
+  @include respond-below($breakpoint-md) {
+    width: 45px;
+    height: 45px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}

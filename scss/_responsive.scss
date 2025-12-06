@@ -2,7 +2,7 @@
 // RESPONSIVE
 // ========================================
 
-// === EXTRA SMALL DEVICES (320px - 479px) ===
+// === EXTRA SMALL DEVICES (< 480px) ===
 @include respond-below($breakpoint-xs) {
   .hero__title {
     font-size: 1.75rem;
@@ -19,6 +19,15 @@
   .service-card__amount {
     font-size: $font-size-3xl;
   }
+  
+  .section__title {
+    font-size: $font-size-2xl;
+  }
+  
+  .testimonials__grid,
+  .services__cards {
+    gap: $spacing-md;
+  }
 }
 
 // === SMALL DEVICES (480px - 767px) ===
@@ -30,6 +39,11 @@
   .hero__stats {
     gap: $spacing-md;
   }
+  
+  .about__container,
+  .contact__container {
+    gap: $spacing-lg;
+  }
 }
 
 // === TABLET (768px - 1023px) ===
@@ -40,9 +54,21 @@
   
   .service-card:last-child {
     grid-column: 1 / -1;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     width: 100%;
+  }
+  
+  .hero__container,
+  .about__container {
+    gap: $spacing-xl;
+  }
+}
+
+// === MEDIUM DESKTOP (1024px - 1279px) ===
+@include respond-between($breakpoint-lg, $breakpoint-xl) {
+  .container {
+    max-width: 1100px;
   }
 }
 
@@ -59,4 +85,21 @@
   .section__title {
     font-size: $font-size-4xl;
   }
+  
+  .hero__container,
+  .about__container {
+    gap: 5rem;
+  }
+}
+
+// === FIX HORIZONTAL OVERFLOW ===
+body, html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+// === ENSURE IMAGES NEVER OVERFLOW ===
+img {
+  max-width: 100%;
+  height: auto;
 }

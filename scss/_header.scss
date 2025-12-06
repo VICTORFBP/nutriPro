@@ -1,20 +1,187 @@
+// ========================================
+// HEADER
+// ========================================
+
 .header {
-  width: 100%;
-  padding: $spacing-sm 0;
-  background: white;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: $spacing-sm 0;
+  z-index: 100;
   border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+  
+  &.scroll-header {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
 
-  .nav {
-    @include flex-center;
-    justify-content: space-between;
+// === NAV ===
+.nav {
+  @include flex-center;
+  justify-content: space-between;
+  height: 70px;
+}
 
-    &__menu {
-      display: flex;
-      gap: $spacing-md;
-      font-weight: 600;
+// Logo
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-family: $font-primary;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $color-primary;
+  transition: color 0.3s ease;
+  z-index: 200;
+  
+  &:hover {
+    color: darken($color-primary, 10%);
+  }
+  
+  i {
+    font-size: 1.3em;
+  }
+  
+  @include respond-below($breakpoint-md) {
+    font-size: 1.25rem;
+  }
+}
+
+// Menu
+.nav__menu {
+  @include respond-below($breakpoint-md) {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: white;
+    padding: 5rem 2rem 2rem;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+    transition: right 0.4s ease;
+    z-index: 150;
+    overflow-y: auto;
+  }
+  
+  &.show-menu {
+    right: 0;
+  }
+}
+
+.nav__list {
+  display: flex;
+  gap: $spacing-md;
+  font-weight: 600;
+  
+  @include respond-below($breakpoint-md) {
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+  
+  @include respond-between($breakpoint-md, $breakpoint-lg) {
+    gap: $spacing-sm;
+  }
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $color-text;
+  padding: $spacing-xs 0;
+  position: relative;
+  transition: color 0.3s ease;
+  
+  @include respond-below($breakpoint-md) {
+    font-size: 1.125rem;
+    padding: $spacing-sm 0;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $color-primary;
+    transition: width 0.3s ease;
+  }
+  
+  &:hover,
+  &.active-link {
+    color: $color-primary;
+    
+    &::after {
+      width: 100%;
     }
+  }
+}
+
+// Close button (mobile)
+.nav__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: $color-dark;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  
+  &:hover {
+    color: $color-primary;
+    transform: rotate(90deg);
+  }
+  
+  @include respond-above($breakpoint-md) {
+    display: none;
+  }
+}
+
+// Toggle button (mobile)
+.nav__toggle {
+  font-size: 1.5rem;
+  color: $color-dark;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  
+  &:hover {
+    color: $color-primary;
+  }
+  
+  @include respond-above($breakpoint-md) {
+    display: none;
+  }
+}
+
+// Overlay when menu is open (mobile)
+.nav__menu.show-menu::before {
+  @include respond-below($breakpoint-md) {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
   }
 }

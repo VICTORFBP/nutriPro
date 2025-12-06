@@ -1,3 +1,7 @@
+// ========================================
+// BASE STYLES
+// ========================================
+
 body {
   font-family: $font-secondary;
   background: $color-light;
@@ -13,4 +17,23 @@ h1, h2, h3 {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+}
+
+// === SECTION UTILITIES ===
+.section__subtitle {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $color-primary;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: $spacing-xs;
+}
+
+.section__description {
+  font-size: 1rem;
+  color: $color-text;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 700px;
 }
