@@ -1,11 +1,12 @@
 .header {
   width: 100%;
   padding: $spacing-sm 0;
-  background: white;
+  background: rgb(247, 243, 243);
   position: sticky;
-  top: 0;
+  top: 0%;
   z-index: 10;
-  border-bottom: 1px solid #eee;
+  
+  border-bottom: 1px solid #74746d;
 
   .nav {
     @include flex-center;
@@ -15,6 +16,11 @@
       display: flex;
       gap: $spacing-md;
       font-weight: 600;
+    }
+
+    &__list{
+      display:flex;
+      gap: 30px;
     }
   }
 }
