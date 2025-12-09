@@ -11,6 +11,19 @@
     padding-top: calc(70px + 4rem);
     padding-bottom: 5rem;
   }
+
+  &__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  &__image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
 }
 
 .hero__container {

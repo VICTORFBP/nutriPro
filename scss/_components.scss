@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // ========================================
 // COMPONENTS
 // ========================================
@@ -104,3 +105,17 @@
     right: 1.5rem;
   }
 }
+=======
+.button {
+  @include button-style($color-primary);
+  display: inline-block;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: $spacing-lg;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+>>>>>>> darcys_

@@ -1,0 +1,179 @@
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f9f9f9;
+  color: #444;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding: 3rem 0;
+}
+.section__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.button {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.button:hover {
+  opacity: 0.9;
+}
+.button {
+  display: inline-block;
+  text-align: center;
+}
+
+.card, .service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  width: 100%;
+  padding: 1rem 0;
+  background: rgb(247, 243, 243);
+  position: sticky;
+  top: 0%;
+  z-index: 10;
+  border-bottom: 1px solid #74746d;
+}
+.header .nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-center;
+  justify-content: space-between;
+}
+.header .nav__menu {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 600;
+}
+.header .nav__list {
+  display: flex;
+  gap: 30px;
+}
+
+.hero {
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.hero__title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+.hero__buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+.hero__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.services__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-card__amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4CAF50;
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.75rem;
+  }
+  .hero__buttons {
+    flex-direction: column;
+  }
+  .hero__buttons .button {
+    width: 100%;
+  }
+  .service-card__amount {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .section__title {
+    font-size: 2.5rem;
+  }
+  .hero__stats {
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .services__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-card:last-child {
+    grid-column: 1/-1;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+  .hero__title {
+    font-size: 4rem;
+  }
+  .section__title {
+    font-size: 4rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
