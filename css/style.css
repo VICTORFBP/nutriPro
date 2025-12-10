@@ -20,7 +20,7 @@ a {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background: #f9f9f9;
   color: #444;
 }
@@ -94,29 +94,40 @@ h1, h2, h3 {
   gap: 30px;
 }
 
-.hero {
-  padding: 3rem 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
 .hero__title {
-  font-size: 4rem;
+  font-size: 0.875rem;
   margin-bottom: 1.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 0.8;
+}
+.hero__description {
+  text-align: center;
 }
 .hero__buttons {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
+  font-size: 1rem;
 }
 .hero__image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hero__image img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 70%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 400px;
+}
+.about__content {
+  text-align: center;
 }
 
 .services__cards {
@@ -129,6 +140,17 @@ h1, h2, h3 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #4CAF50;
+}
+
+.testimonials img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: 250px;
+}
+.testimonials__quote {
+  text-align: center;
 }
 
 @media (max-width: 480px) {

@@ -13,7 +13,8 @@ $color-text: #444;
 
 // TYPOGRAPHY
 $font-primary: 'Poppins', sans-serif;
-$font-secondary: 'Open Sans', sans-serif;
+$font-secondary: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 
 // FONT SIZES
 $font-size-sm: 0.875rem;
@@ -37,3 +38,5 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
 
+// INTERLINEADOS
+$line-height: 0.8;

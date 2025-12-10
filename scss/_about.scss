@@ -1,0 +1,14 @@
+.about {
+  &__image{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 400px;
+  }
+  &__content{
+    text-align: center;
+  }
+}

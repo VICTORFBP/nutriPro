@@ -1,29 +1,28 @@
 .hero {
-  padding: $spacing-xl 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-
+  
   &__title {
-    font-size: $font-size-4xl;
+    font-size: $font-size-sm;
     margin-bottom: $spacing-md;
+    font-family:$font-secondary;
+    line-height:$line-height;
+  }
+
+  &__description{
+    text-align: center;
   }
 
   &__buttons {
     display: flex;
+    justify-content: center;
     gap: $spacing-md;
+    font-size: $font-size-base;
   }
 
-  &__image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-  &__image img {
+  &__image{
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 70%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
-
 }
