@@ -2,71 +2,96 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="description" content="NutriPro - Transforma tu salud con nutrición personalizada. Consultas profesionales, planes personalizados y seguimiento continuo.">
-  <meta name="keywords" content="nutricionista, nutrición, dieta, salud, consulta nutricional">
+  <meta name="keywords" content="nutricionista, nutrición, dieta, salud, consulta nutricional, nutricionista en Bogotá">
+  <meta name="author" content="NutriPro">
+  <meta name="theme-color" content="#4CAF50">
   
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="NutriPro - Nutrición Personalizada">
   <meta property="og:description" content="Transforma tu salud con planes de nutrición personalizados">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nutripro.com">
+  <meta property="og:image" content="https://nutripro.com/assets/imagenes/og-image.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NutriPro - Nutrición Personalizada">
+  <meta name="twitter:description" content="Transforma tu salud con planes de nutrición personalizados">
   
   <title>NutriPro - Nutrición Personalizada | Consulta Gratuita</title>
   
-  <!-- Google Fonts -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   
   <!-- Compiled CSS -->
   <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="css/main.css" as="style">
+  <link rel="preload" href="assets/imagenes/hero-bg.jpg" as="image">
 </head>
 <body>
+  
+  <!-- Skip to main content (Accesibilidad) -->
+  <a href="#inicio" class="skip-link">Saltar al contenido principal</a>
+  
   <!-- ========== HEADER ========== -->
   <header class="header" id="header">
-    <nav class="nav container">
-      <a href="index.html" class="nav__logo">
-        <i class="fa-solid fa-leaf"></i>
+    <nav class="nav container" role="navigation" aria-label="Navegación principal">
+      <a href="index.html" class="nav__logo" aria-label="NutriPro - Inicio">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
         NutriPro
       </a>
 
       <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#inicio" class="nav__link active-link">Inicio</a>
+        <ul class="nav__list" role="menubar">
+          <li class="nav__item" role="none">
+            <a href="#inicio" class="nav__link active-link" role="menuitem">Inicio</a>
           </li>
-          <li class="nav__item">
-            <a href="#sobre-mi" class="nav__link">Sobre Mí</a>
+          <li class="nav__item" role="none">
+            <a href="#sobre-mi" class="nav__link" role="menuitem">Sobre Mí</a>
           </li>
-          <li class="nav__item">
-            <a href="#servicios" class="nav__link">Servicios</a>
+          <li class="nav__item" role="none">
+            <a href="#servicios" class="nav__link" role="menuitem">Servicios</a>
           </li>
-          <li class="nav__item">
-            <a href="#testimonios" class="nav__link">Testimonios</a>
+          <li class="nav__item" role="none">
+            <a href="#testimonios" class="nav__link" role="menuitem">Testimonios</a>
           </li>
-          <li class="nav__item">
-            <a href="#contacto" class="nav__link">Contacto</a>
+          <li class="nav__item" role="none">
+            <a href="#contacto" class="nav__link" role="menuitem">Contacto</a>
           </li>
         </ul>
 
         <!-- Close button -->
-        <div class="nav__close" id="nav-close">
-          <i class="fa-solid fa-bars"></i>
-        </div>
+        <button class="nav__close" id="nav-close" aria-label="Cerrar menú">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
       </div>
 
       <!-- Toggle button -->
-      <div class="nav__toggle" id="nav-toggle">
-        <i class="fa-solid fa-bars"></i>
-      </div>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
     </nav>
   </header>
+  
   <!-- ========== MAIN ========== -->
-  <main class="main">
+  <main class="main" id="main-content">
     
     <!-- ========== HERO SECTION ========== -->
     <section class="hero section" id="inicio">
@@ -80,7 +105,7 @@
           </p>
           <div class="hero__buttons">
             <a href="#contacto" class="button button--primary">
-              <i class="fa-solid fa-calendar-check"></i>
+              <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
               Agenda tu Consulta Gratis
             </a>
             <a href="#servicios" class="button button--outline">
@@ -91,22 +116,22 @@
           <!-- Stats -->
           <div class="hero__stats">
             <div class="hero__stat">
-              <span class="hero__stat-number">500+</span>
+              <span class="hero__stat-number" aria-label="Más de 500">500+</span>
               <span class="hero__stat-text">Clientes Satisfechos</span>
             </div>
             <div class="hero__stat">
-              <span class="hero__stat-number">95%</span>
+              <span class="hero__stat-number" aria-label="95 por ciento">95%</span>
               <span class="hero__stat-text">Tasa de Éxito</span>
             </div>
             <div class="hero__stat">
-              <span class="hero__stat-number">10+</span>
+              <span class="hero__stat-number" aria-label="Más de 10 años">10+</span>
               <span class="hero__stat-text">Años de Experiencia</span>
             </div>
           </div>
         </div>
 
         <div class="hero__image">
-          <img src="assets/imagenes/hero-bg.jpg" alt="Nutricionista profesional con alimentos saludables">
+          <img src="assets/imagenes/hero-bg.jpg" alt="Nutricionista profesional con alimentos saludables" loading="eager" width="600" height="550">
         </div>
       </div>
     </section>
@@ -115,7 +140,7 @@
     <section class="about section" id="sobre-mi">
       <div class="about__container container">
         <div class="about__image">
-          <img src="assets/imagenes/nutricionista-foto.jpg" alt="Dra. María González - Nutricionista Certificada">
+          <img src="assets/imagenes/nutricionista-foto.jpg" alt="Dra. María González - Nutricionista Certificada" loading="lazy" width="500" height="500">
           <div class="about__image-overlay"></div>
         </div>
 
@@ -132,28 +157,28 @@
           <!-- Credentials -->
           <div class="about__credentials">
             <div class="credential">
-              <i class="fa-solid fa-certificate credential__icon"></i>
+              <i class="fa-solid fa-certificate credential__icon" aria-hidden="true"></i>
               <div class="credential__info">
                 <h4 class="credential__title">Nutricionista Certificada</h4>
                 <p class="credential__text">Licencia Nacional N° 12345</p>
               </div>
             </div>
             <div class="credential">
-              <i class="fa-solid fa-award credential__icon"></i>
+              <i class="fa-solid fa-award credential__icon" aria-hidden="true"></i>
               <div class="credential__info">
                 <h4 class="credential__title">Especialización</h4>
                 <p class="credential__text">Nutrición Deportiva y Clínica</p>
               </div>
             </div>
             <div class="credential">
-              <i class="fa-solid fa-graduation-cap credential__icon"></i>
+              <i class="fa-solid fa-graduation-cap credential__icon" aria-hidden="true"></i>
               <div class="credential__info">
                 <h4 class="credential__title">Educación</h4>
                 <p class="credential__text">Universidad Nacional</p>
               </div>
             </div>
             <div class="credential">
-              <i class="fa-solid fa-users credential__icon"></i>
+              <i class="fa-solid fa-users credential__icon" aria-hidden="true"></i>
               <div class="credential__info">
                 <h4 class="credential__title">Miembro Activo</h4>
                 <p class="credential__text">Asociación de Nutricionistas</p>
@@ -178,11 +203,11 @@
         <div class="services__cards">
           
           <!-- Plan Básico -->
-          <div class="service-card">
+          <article class="service-card">
             <div class="service-card__header">
               <h3 class="service-card__title">Consulta Individual</h3>
               <div class="service-card__price">
-                <span class="service-card__currency">$</span>
+                <span class="service-card__currency" aria-label="Dólares">$</span>
                 <span class="service-card__amount">50</span>
               </div>
               <p class="service-card__period">Por consulta</p>
@@ -190,23 +215,23 @@
             <div class="service-card__body">
               <ul class="service-card__features">
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Evaluación nutricional completa
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Plan alimenticio personalizado
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Análisis de composición corporal
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Recetas y lista de compras
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Soporte por email (7 días)
                 </li>
               </ul>
@@ -216,15 +241,15 @@
                 Elegir Plan
               </a>
             </div>
-          </div>
+          </article>
 
           <!-- Plan Estándar (Featured) -->
-          <div class="service-card service-card--featured">
+          <article class="service-card service-card--featured">
             <div class="service-card__badge">Más Popular</div>
             <div class="service-card__header">
               <h3 class="service-card__title">Seguimiento Mensual</h3>
               <div class="service-card__price">
-                <span class="service-card__currency">$</span>
+                <span class="service-card__currency" aria-label="Dólares">$</span>
                 <span class="service-card__amount">180</span>
               </div>
               <p class="service-card__period">Por mes</p>
@@ -232,27 +257,27 @@
             <div class="service-card__body">
               <ul class="service-card__features">
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Todo lo del Plan Básico
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   4 consultas mensuales
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Ajustes de plan semanales
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Soporte por WhatsApp ilimitado
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Recetas exclusivas semanales
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Seguimiento de progreso digital
                 </li>
               </ul>
@@ -262,14 +287,14 @@
                 Elegir Plan
               </a>
             </div>
-          </div>
+          </article>
 
           <!-- Plan Premium -->
-          <div class="service-card">
+          <article class="service-card">
             <div class="service-card__header">
               <h3 class="service-card__title">Transformación 90 Días</h3>
               <div class="service-card__price">
-                <span class="service-card__currency">$</span>
+                <span class="service-card__currency" aria-label="Dólares">$</span>
                 <span class="service-card__amount">450</span>
               </div>
               <p class="service-card__period">Por 3 meses</p>
@@ -277,31 +302,31 @@
             <div class="service-card__body">
               <ul class="service-card__features">
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Todo lo del Plan Estándar
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   12 consultas en 3 meses
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Plan de ejercicios complementario
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Análisis de laboratorio incluidos
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Videollamadas de seguimiento
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Plan de mantenimiento post-programa
                 </li>
                 <li class="service-card__feature">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
                   Garantía de resultados
                 </li>
               </ul>
@@ -311,7 +336,7 @@
                 Elegir Plan
               </a>
             </div>
-          </div>
+          </article>
 
         </div>
       </div>
@@ -328,67 +353,67 @@
         <div class="testimonials__grid">
           
           <!-- Testimonial 1 -->
-          <div class="testimonial-card">
-            <div class="testimonial-card__rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+          <article class="testimonial-card">
+            <div class="testimonial-card__rating" aria-label="5 estrellas de 5">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
             </div>
-            <p class="testimonial-card__quote">
+            <blockquote class="testimonial-card__quote">
               "María cambió completamente mi relación con la comida. No solo perdí 15kg, sino que aprendí a nutrirme de forma consciente. Su enfoque es profesional, empático y totalmente personalizado."
-            </p>
+            </blockquote>
             <div class="testimonial-card__author">
-              <img src="assets/imagenes/testimonio-1.jpg" alt="Carlos Rodríguez" class="testimonial-card__avatar">
+              <img src="assets/imagenes/testimonio-1.jpg" alt="" class="testimonial-card__avatar" loading="lazy" width="50" height="50">
               <div class="testimonial-card__info">
                 <h4 class="testimonial-card__name">Carlos Rodríguez</h4>
                 <p class="testimonial-card__result">Perdió 15kg en 3 meses</p>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- Testimonial 2 -->
-          <div class="testimonial-card">
-            <div class="testimonial-card__rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+          <article class="testimonial-card">
+            <div class="testimonial-card__rating" aria-label="5 estrellas de 5">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
             </div>
-            <p class="testimonial-card__quote">
+            <blockquote class="testimonial-card__quote">
               "Como atleta, necesitaba un plan nutricional que mejorara mi rendimiento. Los resultados fueron increíbles: más energía, mejor recuperación y finalmente alcancé mi peso ideal para competir."
-            </p>
+            </blockquote>
             <div class="testimonial-card__author">
-              <img src="assets/imagenes/testimonio-2.jpg" alt="Laura Martínez" class="testimonial-card__avatar">
+              <img src="assets/imagenes/testimonio-2.jpg" alt="" class="testimonial-card__avatar" loading="lazy" width="50" height="50">
               <div class="testimonial-card__info">
                 <h4 class="testimonial-card__name">Laura Martínez</h4>
                 <p class="testimonial-card__result">Mejoró rendimiento deportivo 40%</p>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- Testimonial 3 -->
-          <div class="testimonial-card">
-            <div class="testimonial-card__rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+          <article class="testimonial-card">
+            <div class="testimonial-card__rating" aria-label="5 estrellas de 5">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
             </div>
-            <p class="testimonial-card__quote">
+            <blockquote class="testimonial-card__quote">
               "Después de años luchando con problemas digestivos, María identificó mis intolerancias y creó un plan que transformó mi salud. Ahora tengo más energía que nunca y cero molestias."
-            </p>
+            </blockquote>
             <div class="testimonial-card__author">
-              <img src="assets/imagenes/testimonio-3.jpg" alt="Andrea López" class="testimonial-card__avatar">
+              <img src="assets/imagenes/testimonio-3.jpg" alt="" class="testimonial-card__avatar" loading="lazy" width="50" height="50">
               <div class="testimonial-card__info">
                 <h4 class="testimonial-card__name">Andrea López</h4>
                 <p class="testimonial-card__result">Eliminó problemas digestivos</p>
               </div>
             </div>
-          </div>
+          </article>
 
         </div>
       </div>
@@ -409,31 +434,43 @@
           <!-- Contact Info -->
           <div class="contact__info">
             <div class="contact__info-item">
-              <i class="fa-solid fa-phone contact__info-icon"></i>
+              <div class="contact__info-icon">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </div>
               <div>
                 <h4 class="contact__info-title">Teléfono</h4>
-                <p class="contact__info-text">+57 300 123 4567</p>
+                <p class="contact__info-text">
+                  <a href="tel:+573001234567">+57 300 123 4567</a>
+                </p>
               </div>
             </div>
             <div class="contact__info-item">
-              <i class="fa-solid fa-envelope contact__info-icon"></i>
+              <div class="contact__info-icon">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </div>
               <div>
                 <h4 class="contact__info-title">Email</h4>
-                <p class="contact__info-text">contacto@nutripro.com</p>
+                <p class="contact__info-text">
+                  <a href="mailto:contacto@nutripro.com">contacto@nutripro.com</a>
+                </p>
               </div>
             </div>
             <div class="contact__info-item">
-              <i class="fa-solid fa-location-dot contact__info-icon"></i>
+              <div class="contact__info-icon">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
               <div>
                 <h4 class="contact__info-title">Ubicación</h4>
                 <p class="contact__info-text">Calle 123 #45-67, Bogotá, Colombia</p>
               </div>
             </div>
             <div class="contact__info-item">
-              <i class="fa-solid fa-clock contact__info-icon"></i>
+              <div class="contact__info-icon">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              </div>
               <div>
                 <h4 class="contact__info-title">Horario</h4>
-                <p class="contact__info-text">Lun - Vie: 8:00 AM - 6:00 PM</p>
+                <p class="contact__info-text">Lun - Vie: 8:00 AM - 6:00 PM<br>Sáb: 9:00 AM - 1:00 PM</p>
               </div>
             </div>
           </div>
@@ -441,22 +478,29 @@
 
         <!-- Contact Form -->
         <div class="contact__form-wrapper">
-          <form class="contact__form" id="contact-form">
+          <form class="contact__form" id="contact-form" novalidate>
+            
             <div class="form__group">
-              <label for="name" class="form__label">Nombre Completo *</label>
+              <label for="name" class="form__label">
+                Nombre Completo <span class="required">*</span>
+              </label>
               <input 
                 type="text" 
                 id="name" 
                 name="name" 
                 class="form__input" 
-                placeholder="Tu nombre"
+                placeholder="Tu nombre completo"
                 required
+                autocomplete="name"
+                aria-required="true"
               >
-              <span class="form__error" id="name-error"></span>
+              <span class="form__error" id="name-error" role="alert"></span>
             </div>
 
             <div class="form__group">
-              <label for="email" class="form__label">Email *</label>
+              <label for="email" class="form__label">
+                Email <span class="required">*</span>
+              </label>
               <input 
                 type="email" 
                 id="email" 
@@ -464,12 +508,16 @@
                 class="form__input" 
                 placeholder="tu@email.com"
                 required
+                autocomplete="email"
+                aria-required="true"
               >
-              <span class="form__error" id="email-error"></span>
+              <span class="form__error" id="email-error" role="alert"></span>
             </div>
 
             <div class="form__group">
-              <label for="phone" class="form__label">Teléfono *</label>
+              <label for="phone" class="form__label">
+                Teléfono <span class="required">*</span>
+              </label>
               <input 
                 type="tel" 
                 id="phone" 
@@ -477,12 +525,16 @@
                 class="form__input" 
                 placeholder="+57 300 123 4567"
                 required
+                autocomplete="tel"
+                aria-required="true"
               >
-              <span class="form__error" id="phone-error"></span>
+              <span class="form__error" id="phone-error" role="alert"></span>
             </div>
 
             <div class="form__group form__group--full">
-              <label for="message" class="form__label">Mensaje / Motivo de Consulta *</label>
+              <label for="message" class="form__label">
+                Mensaje / Motivo de Consulta <span class="required">*</span>
+              </label>
               <textarea 
                 id="message" 
                 name="message" 
@@ -490,30 +542,41 @@
                 rows="5" 
                 placeholder="Cuéntame sobre tus objetivos de salud..."
                 required
+                aria-required="true"
+                maxlength="1000"
               ></textarea>
-              <span class="form__error" id="message-error"></span>
+              <span class="form__error" id="message-error" role="alert"></span>
             </div>
 
-            <button type="submit" class="button button--primary button--full">
-              <i class="fa-solid fa-paper-plane"></i>
-              Enviar Consulta
-            </button>
+            <div class="form__submit">
+              <button type="submit" class="button button--primary button--full">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                Enviar Consulta
+              </button>
+            </div>
 
             <!-- Success Message -->
-            <div class="form__message form__message--success" id="success-message">
-              <i class="fa-solid fa-circle-check"></i>
+            <div class="form__message form__message--success" id="success-message" role="alert" aria-live="polite">
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
               <p>¡Mensaje enviado con éxito! Te contactaré pronto.</p>
             </div>
 
             <!-- Error Message -->
-            <div class="form__message form__message--error" id="error-message">
-              <i class="fa-solid fa-circle-exclamation"></i>
+            <div class="form__message form__message--error" id="error-message" role="alert" aria-live="assertive">
+              <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
               <p>Por favor, corrige los errores antes de enviar.</p>
             </div>
           </form>
+          
+          <!-- Loading Overlay -->
+          <div class="form__loading">
+            <div class="spinner"></div>
+          </div>
         </div>
       </div>
     </section>
+
+  </main>
 
   </main>
   <!-- ========== FOOTER ========== -->
@@ -612,6 +675,7 @@
   <script src="js/menu.js"></script>
   <script src="js/scroll.js"></script>
   <script src="js/form-validation.js"></script>
+  <script src="js/form-enhancements.js"></script>
   <script src="js/main.js"></script>
 
 </body>

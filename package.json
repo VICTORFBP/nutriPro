@@ -1,0 +1,35 @@
+{
+  "name": "nutripro",
+  "version": "1.0.0",
+  "description": "Landing page para NutriPro - Nutrición Personalizada",
+  "homepage": "https://github.com/VICTORFBP/nutriPro#readme",
+  "bugs": {
+    "url": "https://github.com/VICTORFBP/nutriPro/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VICTORFBP/nutriPro.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.html",
+"scripts": {
+  "sass:watch": "sass --watch scss:css",
+  "sass:build": "sass scss/main.scss css/main.css --style=compressed",
+  "dev": "browser-sync start --server --files '**/*'",
+  "build": "npm-run-all sass:build"
+},
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "imagemin-cli": "^8.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.7.4",
+    "rimraf": "^6.1.2",
+    "sass": "^1.96.0",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard-scss": "^16.0.0"
+  }
+}

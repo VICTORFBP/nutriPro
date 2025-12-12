@@ -1,4 +1,12 @@
 node_modules/
-.DS_Store
-*.css.map
+npm-debug.log*
+
+# Build outputs
+css/*.map
+
+# IDE
 .vscode/
+.idea/
+
+# OS
+.DS_Store
