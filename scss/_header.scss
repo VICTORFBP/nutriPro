@@ -145,6 +145,7 @@
   width: 40px;
   height: 40px; 
   background-color: white;
+  border:0;
 
   &:hover {
     color: $color-primary;
@@ -165,6 +166,7 @@
   cursor: pointer;
   transition: color 0.3s ease;
   background-color: white;
+  border:0;
   
   &:hover {
     color: $color-primary;

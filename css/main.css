@@ -317,6 +317,7 @@ h1, h2, h3 {
   width: 40px;
   height: 40px;
   background-color: white;
+  border: 0;
 }
 .nav__close:hover {
   color: #4CAF50;
@@ -336,6 +337,7 @@ h1, h2, h3 {
   cursor: pointer;
   transition: color 0.3s ease;
   background-color: white;
+  border: 0;
 }
 .nav__toggle:hover {
   color: #4CAF50;
